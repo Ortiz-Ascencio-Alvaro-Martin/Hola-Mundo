@@ -1,6 +1,6 @@
-#include<iostream>
-#include<Mascota.hpp>
-#include<Alimento.hpp>
+#include <iostream>
+#include <Mascota.hpp>
+#include <Alimento.hpp>
 using namespace std;
 
 

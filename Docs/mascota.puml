@@ -1,0 +1,69 @@
+@startuml mascota
+
+class Mascota
+class Alimento
+class Juguete
+class Pelota
+class Carne
+class Pollo
+class Res
+class verduras
+class zanahoria
+class Color
+class Genero
+class Animal 
+class Perro
+class Gato
+class Pajaro
+class Columpio
+class Peso
+class Dueño
+class Vitalidad
+class Baño
+class Jabon
+class Agua
+class Bebida
+class Estamina
+class Edad 
+class Vestimenta
+class Sentimiento
+class Feliz
+class Triste
+class Estresado
+
+
+Mascota o-- Bebida
+Estamina --* Mascota
+Agua --|> Bebida
+Baño *-- Agua
+Baño *-- Jabon
+Baño --o Mascota
+Vitalidad --* Mascota
+Dueño *-- Mascota
+Peso --* Mascota
+Columpio --|> Juguete
+Mascota --|> Animal
+Genero --* Mascota
+Color --* Mascota
+Alimento --o Mascota
+Pelota --|> Juguete
+Juguete --o Mascota
+Pollo --|> Carne
+Res --|> Carne
+Carne --|> Alimento
+zanahoria --|> verduras
+verduras --|> Alimento
+Perro --|> Animal
+Gato --|> Animal
+Pajaro --|> Animal
+Mascota o-- Vestimenta
+Mascota *-- Edad
+Vestimenta *-- Color
+Alimento *-- Vitalidad
+Sentimiento --* Mascota
+Feliz --|> Sentimiento
+Triste --|> Sentimiento
+Estres --|> Sentimiento
+
+
+@enduml
