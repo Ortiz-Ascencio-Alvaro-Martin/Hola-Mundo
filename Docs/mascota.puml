@@ -1,53 +1,100 @@
 @startuml mascota
+package Alimentos{
 
-class Mascota
-class Alimento
-class Juguete
-class Pelota
-class Carne
+class Carne{
+    
+}
 class Pollo
-class Res
+class Alimento{
+    enegia:Energia
+}
 class verduras
+class Res
 class zanahoria
-class Color
-class Genero
-class Animal 
-class Perro
-class Gato
-class Pajaro
-class Columpio
-class Peso
-class Dueño
-class Vitalidad
-class Baño
-class Jabon
-class Agua
-class Bebida
-class Estamina
-class Edad 
-class Vestimenta
+
+}
+
+package Sentmientos {
+
 class Sentimiento
 class Feliz
 class Triste
-class Estresado
+class Estres
+
+}
 
 
-Mascota o-- Bebida
-Estamina --* Mascota
+package Animales{
+
+class Animal {
+
+}
+class Perro
+class Gato
+class Pajaro
+
+}
+package Atributos{
+
+class Estamina
+class Edad 
+class Color
+class Peso
+class Vitalidad
+class Vestimenta
+class Genero
+
+
+}
+
+package Juguetes{
+
+class Juguete
+class Pelota
+class Columpio
+
+}
+
+package Baños{
+
+class Baño
+class Jabon
+class Agua
+
+}
+package Mascotas{
+class Mascota{
+ -genero:Genero
+ -vestimenta:Vestimenta
+ -vitalidad:Vitalidad
+ -peso:Peso
+ -color:Color
+ -edad:Edad
+ -energia:Estamina
+ +Comer(Alimento);
+ +Beber(Bebida);
+ +Jugar(Juguete);
+ +Cambiarse(Vestiemta);
+ +Bañarse(Baño);
+
+
+}
+class Dueño
+}
+
+
+class Bebida
+
+
+
+
+Mascota "1" o--  "1" Bebida
+Estamina "1" --* "1" Mascota
 Agua --|> Bebida
-Baño *-- Agua
-Baño *-- Jabon
-Baño --o Mascota
-Vitalidad --* Mascota
-Dueño *-- Mascota
-Peso --* Mascota
-Columpio --|> Juguete
-Mascota --|> Animal
-Genero --* Mascota
-Color --* Mascota
-Alimento --o Mascota
-Pelota --|> Juguete
-Juguete --o Mascota
+Baño "1" *-- "*" Agua
+Baño "1" *--  "1..*" Jabon
+Baño "1" --o "1" Mascota
+Vitalidad "1" --* "1" Mascota
 Pollo --|> Carne
 Res --|> Carne
 Carne --|> Alimento
@@ -56,14 +103,23 @@ verduras --|> Alimento
 Perro --|> Animal
 Gato --|> Animal
 Pajaro --|> Animal
-Mascota o-- Vestimenta
-Mascota *-- Edad
-Vestimenta *-- Color
-Alimento *-- Vitalidad
-Sentimiento --* Mascota
+Mascota "1" o-- "1" Vestimenta
+Mascota "1" *-- "1" Edad
+Sentimiento "1" --* "1" Mascota
 Feliz --|> Sentimiento
 Triste --|> Sentimiento
 Estres --|> Sentimiento
+Dueño "1..*" *-- "1" Mascota
+Peso --* Mascota
+Columpio --|> Juguete
+ Animal --|> Mascota
+Genero "1" --* "1" Mascota
+Color "1..*" --* "1" Mascota
+Alimento "1" --o "1" Mascota
+Pelota --|> Juguete
+Juguete "1" --o "1" Mascota
+
+
 
 
 @enduml
