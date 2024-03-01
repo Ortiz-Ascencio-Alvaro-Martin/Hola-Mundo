@@ -1,0 +1,10 @@
+   read    write   execute 
+  |u
+ a|g
+  |0
+
+
+
+  -ls    muestra archivo -l para lista
+  pwd    mostrar directorio
+  cd     mover de directorio
