@@ -8,3 +8,25 @@
   -ls    muestra archivo -l para lista
   pwd    mostrar directorio
   cd     mover de directorio
+
+  chmod ar permiso (a,u,g,0)+-(rwe)    https://docs.oracle.com/cd/E19620-01/805-7644/x-5lbib/index.html
+
+04/03/2024
+
+  IA chida https://www.thewizard.ai
+  IA2 
+
+  resetear codigo=ctr+k y luego F
+  int    4bytes
+  float  4bytes
+  char   1bytes
+  double 8bytes
+  long   4bytes
+  bool   1bytes
+
+
+  paso por parametros por valor = copia del valor
+
+
+
+

@@ -3,13 +3,15 @@ class Alimento
 {
 private:
     int Energia;
+
 public:
-    Alimento(int Energia) {
+    Alimento(int Energia)
+    {
         this->Energia = Energia;
     }
-     int ExtraesEnergia(){
+    int ExtraesEnergia()
+    {
         return this->Energia;
     }
     ~Alimento() {}
-   
 };
